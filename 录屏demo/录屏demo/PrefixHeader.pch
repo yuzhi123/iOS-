@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  录屏demo
+//
+//  Created by koudaishu on 2018/6/23.
+//  Copyright © 2018年 zkl. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavBarHeight 44.0
+#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+
+#define kViewToBottom ([[UIApplication sharedApplication] statusBarFrame].size.height>20?34:0)
+
+#define kViewToTop ([[UIApplication sharedApplication] statusBarFrame].size.height>20?kStatusBarHeight:0)
+
+//获取屏幕宽高
+#define KScreenWidth ([[UIScreen mainScreen] bounds].size.width)
+#define KScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define kScreen_Bounds [UIScreen mainScreen].bounds
+
+
+#endif /* PrefixHeader_pch */
